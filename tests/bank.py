@@ -14,7 +14,10 @@ class Bank(object):
         else:
             print "Invalid account number"
 
-    def withdraw_ammount(self, account_number, ammount):
-        wait_value =  self.accounts.get(account_number) 
-        new_value = wait_value - ammount
-        return new_value
+    def withdraw_amount(self, account_number, amount):
+        if type(account_number) == str and type(amount) == int and int(self.accounts.get(account_number)) > amount:
+            wait_value =  self.accounts.get(account_number) 
+            new_value = wait_value - amount
+            return new_value
+        else: 
+            print "error input"

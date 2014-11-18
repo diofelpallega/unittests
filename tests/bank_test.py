@@ -9,7 +9,7 @@ class BankTest(unittest.TestCase):
         account_test = Account("003", 100)
 
         bank.add_account(account_test)
-        bank.withdraw_ammount("003",5)
+        bank.withdraw_amount("003",5)
      
         self.assertEqual(int(bank.get_account_balance("003")) - 5, 95)
         

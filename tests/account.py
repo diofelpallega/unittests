@@ -9,7 +9,7 @@ class Account(object):
  
 class AccountWithdraw(object):
     def __init__(self, account_number, balance, withdraw_amount):
-        if  type(account_number) == str and type(balance) == int and type(withdraw_amount) == int: 
+        if  type(account_number) == str and type(balance) == int and type(withdraw_amount) == int and balance > withdraw_amount: 
             self.balance = balance - withdraw_amount
         else:
             print "invalid inputs"
