@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from bank.bank import Bank
-app = Flask(__name__)
-
+app = Flask(__name__) 
 BANK = Bank()
+
 @app.route('/')
 def hello_world():
     account_number = request.args.get('account_number')

@@ -1,6 +1,6 @@
 import unittest
 from bank.account import Account
-from bank.account import AccountWithdraw
+from account import AccountWithdraw
 
 
 class TestAccount(unittest.TestCase):
